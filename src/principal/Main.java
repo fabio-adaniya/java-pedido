@@ -3,7 +3,6 @@ package principal;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
-import java.util.List;
 
 public class Main {
 	public static void main(String[] args) {
@@ -16,6 +15,7 @@ public class Main {
 		vendedor.setId(1);
 		vendedor.setNomeFantasia("vendedor 1");
 		vendedor.setRazaoSocial("vendedor razao social 1");
+		vendedor.setComissao(7.5);
 		
 		Produto produto = new Produto();
 		produto.setId(1);
@@ -57,27 +57,18 @@ public class Main {
 		DateTimeFormatter data = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 		DateTimeFormatter hora = DateTimeFormatter.ofPattern("HH:mm:ss");
 		
-		System.out.println("Pedido gerado");
-		System.out.println("-------------------------------------");
-		System.out.println("Nº " + pedido.getId());
+		System.out.println("Pedido Nº " + pedido.getId());
+		System.out.println("");
 		System.out.println("Data de emissão: " + pedido.getDataHoraEmissao().format(data));
 		System.out.println("Hora de emissão: " + pedido.getDataHoraEmissao().format(hora)); 
 		System.out.println("Valor total: " + pedido.getValorTotal());
 		System.out.println("=====================================");
-		System.out.println("Dados do cliente");
-		System.out.println("-------------------------------------");
-		System.out.println("Nº: " + pedido.getCliente().getId());
-		System.out.println("Nome fantasia: " + pedido.getCliente().getNomeFantasia());
-		System.out.println("Razão social: " + pedido.getCliente().getRazaoSocial());
+		System.out.println(pedido.getCliente().informacoes());
 		System.out.println("=====================================");
-		System.out.println("Dados do vendedor");
-		System.out.println("-------------------------------------");
-		System.out.println("Nº: " + pedido.getVendedor().getId());
-		System.out.println("Nome fantasia: " + pedido.getVendedor().getNomeFantasia());
-		System.out.println("Razão social: " + pedido.getVendedor().getRazaoSocial());
+		System.out.println(pedido.getVendedor().informacoes());
 		System.out.println("=====================================");
 		System.out.println("Itens do pedido");
-		System.out.println("-------------------------------------");
+		System.out.println("");
 		
 		pedido.getItemPedido().
 			forEach(

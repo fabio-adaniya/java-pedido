@@ -1,7 +1,7 @@
-# java-pedido
+# Java Pedido
 
-Aplicação desenvolvida para colocar em prática a utilização de Abstração, Encapsulamento e Herança.<br>
-Por conta do tema escolhido ser "pedido de venda", foram criadas as seguintes classes: Pedido, ItemPedido, Produto, Pessoa, Vendedor e Cliente
+Aplicação desenvolvida para colocar em prática a utilização de Encapsulamento, Herança e Polimorfismo.<br>
+Por conta do tema escolhido ser "pedido de venda", foram criadas as seguintes classes: Pedido, ItemPedido, Produto, Pessoa, Vendedor e Cliente.
 
 -----------------------
 

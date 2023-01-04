@@ -5,6 +5,8 @@ public abstract class Pessoa {
 	private String nomeFantasia;
 	private String razaoSocial;
 	
+	public abstract String informacoes();
+	
 	public int getId() {
 		return id;
 	}
@@ -28,6 +30,4 @@ public abstract class Pessoa {
 	public void setRazaoSocial(String razaoSocial) {
 		this.razaoSocial = razaoSocial;
 	}
-	
-	
 }
